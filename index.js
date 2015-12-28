@@ -30,6 +30,8 @@ const StatusBarShape = {
 };
 
 function customizeStatusBar(data) {
+  if(!StatusBarIOS) { return; }
+  
   if (data.style) {
     StatusBarIOS.setStyle(data.style, true);
   }
